@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be12ad012dcc31b339acdbacb5db0604",
+    "content-hash": "9f136be77e54cd49a7c9bfa2219b0374",
     "packages": [
         {
             "name": "brick/math",
@@ -5589,16 +5589,16 @@
         },
         {
             "name": "laravel/dusk",
-            "version": "v6.22.1",
+            "version": "dev-vue-3-composition-api",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/dusk.git",
-                "reference": "bc9fd27ea167746ba0616a7661e6b5bd4a80c472"
+                "url": "https://github.com/derekmd/dusk.git",
+                "reference": "2e8e16480d0adc178b095efa5e24f53f43d41a91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/dusk/zipball/bc9fd27ea167746ba0616a7661e6b5bd4a80c472",
-                "reference": "bc9fd27ea167746ba0616a7661e6b5bd4a80c472",
+                "url": "https://api.github.com/repos/derekmd/dusk/zipball/2e8e16480d0adc178b095efa5e24f53f43d41a91",
+                "reference": "2e8e16480d0adc178b095efa5e24f53f43d41a91",
                 "shasum": ""
             },
             "require": {
@@ -5638,7 +5638,11 @@
                     "Laravel\\Dusk\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Laravel\\Dusk\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -5655,10 +5659,9 @@
                 "webdriver"
             ],
             "support": {
-                "issues": "https://github.com/laravel/dusk/issues",
-                "source": "https://github.com/laravel/dusk/tree/v6.22.1"
+                "source": "https://github.com/derekmd/dusk/tree/vue-3-composition-api"
             },
-            "time": "2022-02-12T17:43:36+00:00"
+            "time": "2022-03-24T04:41:21+00:00"
         },
         {
             "name": "laravel/sail",
@@ -8060,9 +8063,18 @@
             "time": "2021-07-28T10:34:58+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "laravel/dusk",
+            "version": "dev-vue-3-composition-api",
+            "alias": "6.22",
+            "alias_normalized": "6.22.0.0"
+        }
+    ],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "laravel/dusk": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

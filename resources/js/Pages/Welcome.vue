@@ -1,15 +1,42 @@
-<script setup>
+<script>
+// Vue 3 Options API
 import { Head, Link } from '@inertiajs/inertia-vue3';
 
-defineProps({
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
-})
+export default {
+    components: {
+        Head,
+        Link,
+    },
+
+    props: {
+        canLogin: Boolean,
+        canRegister: Boolean,
+        laravelVersion: String,
+        phpVersion: String,
+    },
+
+    computed: {
+        cantLogin() {
+            return ! this.canLogin;
+        }
+    }
+}
+
+// Vue 3 composition API
+//
+// <script setup>
+// import { Head, Link } from '@inertiajs/inertia-vue3';
+
+// defineProps({
+//     canLogin: Boolean,
+//     canRegister: Boolean,
+//     laravelVersion: String,
+//     phpVersion: String,
+// })
 </script>
 
 <template>
+    <div dusk="homepage">
     <Head title="Welcome" />
 
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
@@ -120,6 +147,7 @@ defineProps({
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
